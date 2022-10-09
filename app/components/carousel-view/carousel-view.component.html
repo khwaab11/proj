@@ -1,0 +1,51 @@
+
+   <div>
+   <div class="Box"><div class="btn"> <button class="btn btn-primary btn-lg mx-4">Clear Filter</button>
+       <button routerLink="/filter">Edit filter</button>
+    </div>
+    </div>
+    <section class="card">
+       <div class="container-fluid" >
+          <div class="slider-warp">
+    <div class="slider-main" >
+     <div class="item" *ngFor="let emp of usersList " >
+        <div> 
+          <img src="/assets/images/female.jpg" width="150" height="110" style="vertical-align:middle; margin-top:10%;margin-left: 25%;margin-right: 50%;">
+            <div class="container">
+                <strong>Emp Name:</strong>{{emp.fullName}}<br>
+                <strong>Emp No:</strong>{{emp.title}}<br>    
+                <strong>Job:</strong> {{emp.email}}<br>
+                
+                <nav>
+                 <button  (click)="passDetails(emp)">expand btn</button>
+                </nav>
+            </div>
+        </div>
+     </div>
+    </div>
+    </div>
+    <div class="button-area"> 
+         
+        <button class="prev" appPrev > prev </button>
+        <button class="next" appNext > > </button>
+    </div>
+    </div>
+</section> 
+</div>
+ 
+
+  
+
+
+    <router-outlet></router-outlet>
+<!-- <p>this is cxarosal view</p> -->
+
+<!-- <div>
+  <table>
+    <tr *ngFor="let user of usersList">
+   <td>Name : {{user.|ullName}}</td> -->
+      <!-- <td>Title : {{user.title}}</td>
+      <td>Email : {{user.email}}</td>
+    </tr>
+  </table>
+</div -->
